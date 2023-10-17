@@ -1,0 +1,11 @@
+fastapi
+httpx
+pydantic
+uvicorn
+jinja2
+aiofiles
+httptools
+sqlalchemy
+psycopg2-binary
+black
+python-dotenv
