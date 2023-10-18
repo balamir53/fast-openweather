@@ -72,7 +72,7 @@ async def weather(
 
             my_weather_data.append(schemas.Weather(**new_data))
             # write to the database if not its there
-            my_weather_data = create_weather(db,my_weather_data)
+            return create_weather(db,my_weather_data)
         else:
             my_weather_data.append(my_weather)
         

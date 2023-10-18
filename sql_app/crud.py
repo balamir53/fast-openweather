@@ -27,12 +27,12 @@ def create_weather(db: Session, weather:List[schemas.Weather]):
         db.add(db_weather)
         db_weather_list.append(db_weather)
     db.commit()
-    return db_weather_list
+    return weather
 
 def get_weathers_data(db : Session, city: schemas.City):
     return db.query(models.Weather).filter(models.Weather.owner_city == city.id)
 
 def get_weather_data(db:Session, city:models.City, date: datetime):
     # date = datetime.strptime(date,"%Y-%m-%d")
-    if db.query(models.Weather).filter(models.Weather.date==date).first():
-        return db.query(models.Weather).filter(models.Weather.date==date).first()
+    if db.query(models.Weather).filter(models.Weather.date==date).filter(models.Weather.owner_city==city.id).first():
+        return db.query(models.Weather).filter(models.Weather.date==date).filter(models.Weather.owner_city==city.id).first()

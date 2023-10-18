@@ -9,3 +9,6 @@ Weather API
 <br> http://localhost:4444/api/weather/istanbul?country=tr
 <br> http://localhost:4444/api/weather/california?after=2
 <br> http://localhost:4444/api/weather/texas?before=2&after=3
+
+<br><h1> Run tests</h1>
+<br> docker exec fast-openweather-web-1 pytest -v
