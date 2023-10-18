@@ -19,14 +19,9 @@ class Weather(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     # description = Column(String)
-    date = Column(DateTime, default=datetime.datetime.utcnow)
-    country = Column(String)
+    date = Column(DateTime, index=True)
     temp = Column(Float)
-    feels_like = Column(Float)
-    temp_min = Column(Float)
-    temp_max = Column(Float)
-    pressure = Column(Integer)
-    humidity = Column(Integer)
+    temp_fahr = Column(Float)
 
     owner_city = Column(Integer, ForeignKey("cities.id"))
 

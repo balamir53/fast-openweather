@@ -10,3 +10,5 @@ psycopg2-binary
 black
 python-dotenv
 pytest
+ormar
+asyncpg
